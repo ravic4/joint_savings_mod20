@@ -9,6 +9,7 @@ The code works in the following way: To deposit and receive ETH from two differe
 #### Step 1: 
 Defined variables and 
 
+{
 pragma solidity ^0.5.0;
 
 contract JointSavings {
