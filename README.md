@@ -19,4 +19,5 @@ contract JointSavings {
     address public lastToWithdraw; 
     uint public lastWithdrawAmount;
     uint public contractBalance; 
-
+}
+}
