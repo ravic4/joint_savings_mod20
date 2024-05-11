@@ -22,26 +22,26 @@ Defined variables within function: JointSavings
 
 #### Step 2: 
 Created functions to withdraw and deposit cash. 
-    function withdraw(uint amount, address payable recipient) public {
-        require(recipient == accountOne || recipient == accountTwo, "You don't own this account!" );
-        require(contractBalance >= amount, "Insufficient Funds!"); // amount is compared to the contract Balance 
-        if(lastToWithdraw != recipient){
-            lastToWithdraw = recipient; 
-        }
-        recipient.transfer(amount); 
-        lastWithdrawAmount = amount; 
-        contractBalance = address(this).balance; 
-    }
-
-    function deposit() public payable {
-        contractBalance = address(this).balance; 
-    }
-    function setAccounts(address payable account1, address payable account2) public{       
-        accountOne = account1;
-        accountTwo = account2; 
-    }
-    function()
-        external payable{}
-    
+            function withdraw(uint amount, address payable recipient) public {
+                require(recipient == accountOne || recipient == accountTwo, "You don't own this account!" );
+                require(contractBalance >= amount, "Insufficient Funds!"); // amount is compared to the contract Balance 
+                if(lastToWithdraw != recipient){
+                    lastToWithdraw = recipient; 
+                }
+                recipient.transfer(amount); 
+                lastWithdrawAmount = amount; 
+                contractBalance = address(this).balance; 
+            }
+        
+            function deposit() public payable {
+                contractBalance = address(this).balance; 
+            }
+            function setAccounts(address payable account1, address payable account2) public{       
+                accountOne = account1;
+                accountTwo = account2; 
+            }
+            function()
+                external payable{}
+            
 
 
