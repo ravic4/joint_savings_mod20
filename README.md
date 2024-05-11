@@ -9,15 +9,15 @@ The code works in the following way: To deposit and receive ETH from two differe
 #### Step 1: 
 Defined variables and 
 
-{
-pragma solidity ^0.5.0;
 
-contract JointSavings {
+    pragma solidity ^0.5.0;
+    
+    contract JointSavings {
+    
+        address payable accountOne; 
+        address payable accountTwo; 
+        address public lastToWithdraw; 
+        uint public lastWithdrawAmount;
+        uint public contractBalance; 
 
-    address payable accountOne; 
-    address payable accountTwo; 
-    address public lastToWithdraw; 
-    uint public lastWithdrawAmount;
-    uint public contractBalance; 
-}
-}
+
